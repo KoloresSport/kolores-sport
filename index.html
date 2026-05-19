@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kolores Sport – Confecciones en Juliaca, Puno</title>
+<meta name="description" content="Kolores Sport – Confecciones en general: bordados, sublimados digitales y estampados en Juliaca, Puno. Jr. 8 de Noviembre #259. Atención: 8am a 8pm.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --ks-rojo:     #E8192C;
+  --ks-naranja:  #F47920;
+  --ks-amarillo: #FFD600;
+  --ks-verde:    #4CAF50;
+  --ks-azul:     #1565C0;
+  --ks-magenta:  #C2185B;
+  --grad: linear-gradient(135deg, #1565C0 0%, #4CAF50 20%, #FFD600 40%, #F47920 60%, #E8192C 80%, #C2185B 100%);
+  --grad-h: linear-gradient(90deg,  #1565C0 0%, #4CAF50 25%, #FFD600 50%, #F47920 75%, #E8192C 100%);
+  --blanco:  #FFFFFF;
+  --fondo:   #F8F9FC;
+  --fondo2:  #EEF1F8;
+  --negro:   #0D1117;
+  --texto:   #1A1D2E;
+  --gris:    #6B7280;
+  --borde:   #E2E6F0;
+}
+
+html { scroll-behavior: smooth; }
+body { font-family: 'Nunito', sans-serif; color: var(--texto); background: var(--fondo); overflow-x: hidden; }
+
+/* ══════════════════════════════════
+   TOP BAR
+══════════════════════════════════ */
+.top-bar {
+  background: var(--negro);
+  padding: 7px 2rem;
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 6px;
+}
+.top-bar-left { display: flex; align-items: center; gap: 1.4rem; flex-wrap: wrap; }
+.top-bar-item {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 0.75rem; font-weight: 700; color: #AAB4C8;
+  text-decoration: none; transition: color 0.2s;
+}
+.top-bar-item:hover { color: #fff; }
+.top-bar-item svg { width: 14px; height: 14px; flex-shrink: 0; }
+.top-bar-right { display: flex; align-items: center; gap: 12px; }
+.top-social-btn {
+  display: flex; align-items: center; gap: 6px;
+  padding: 4px 10px; border-radius: 4px;
+  font-size: 0.72rem; font-weight: 800; text-decoration: none;
+  transition: opacity 0.2s;
+}
+.top-social-btn:hover { opacity: 0.85; }
+.top-wsp  { background: #25D366; color: #fff; }
+.top-fb   { background: #1877F2; color: #fff; }
+.top-social-btn svg { width: 13px; height: 13px; }
+
+/* ══════════════════════════════════
+   NAV
+══════════════════════════════════ */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--blanco);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 68px;
+  border-bottom: 3px solid transparent;
+  border-image: var(--grad-h) 1;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+}
+.logo-wrap { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.logo-img { height: 46px; width: auto; object-fit: contain; }
+.logo-texts { display: flex; flex-direction: column; line-height: 1.1; }
+.logo-top-txt { font-size: 0.56rem; font-weight: 800; letter-spacing: 3px; text-transform: uppercase; color: var(--gris); }
+.logo-name {
+  font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; letter-spacing: 3px;
+  background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.nav-links { display: flex; gap: 1.5rem; list-style: none; }
+.nav-links a {
+  color: var(--gris); text-decoration: none; font-size: 0.8rem;
+  font-weight: 800; letter-spacing: 1px; text-transform: uppercase; transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--ks-rojo); }
+.nav-toggle { display: none; cursor: pointer; flex-direction: column; gap: 5px; background: none; border: none; padding: 4px; }
+.nav-toggle span { width: 24px; height: 2px; background: var(--texto); display: block; border-radius: 2px; }
+
+/* ══════════════════════════════════
+   HERO
+══════════════════════════════════ */
+#inicio {
+  min-height: 92vh;
+  background: var(--blanco);
+  display: flex; align-items: center; justify-content: center;
+  position: relative; overflow: hidden; padding: 5rem 2rem 4rem;
+}
+.hero-deco-top {
+  position: absolute; top: 0; left: 0; right: 0; height: 5px;
+  background: var(--grad-h);
+}
+.hero-deco-circle {
+  position: absolute; right: -120px; top: 50%; transform: translateY(-50%);
+  width: 520px; height: 520px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(244,121,32,0.07) 0%, rgba(229,25,44,0.04) 40%, transparent 70%);
+  pointer-events: none;
+}
+.hero-deco-circle2 {
+  position: absolute; left: -80px; bottom: -80px;
+  width: 380px; height: 380px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(21,101,192,0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-inner {
+  position: relative; display: grid; grid-template-columns: 1fr auto;
+  gap: 4rem; align-items: center; max-width: 1100px; width: 100%;
+}
+.hero-content {}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--fondo2); border: 1.5px solid var(--borde);
+  border-radius: 20px; padding: 5px 14px; margin-bottom: 1.4rem;
+  font-size: 0.72rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: var(--gris);
+}
+.hero-badge span { width: 7px; height: 7px; border-radius: 50%; background: var(--ks-verde); display: inline-block; }
+.hero-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(3.2rem, 9vw, 6.5rem);
+  line-height: 0.9; letter-spacing: 3px; color: var(--texto); margin-bottom: 0.5rem;
+}
+.hero-title .grad-txt {
+  background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.hero-slogan {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(1.2rem, 3vw, 2rem); letter-spacing: 4px;
+  color: var(--gris); margin-bottom: 1.5rem; font-style: italic;
+}
+.hero-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 2rem; }
+.pill {
+  font-size: 0.72rem; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase;
+  padding: 5px 14px; border-radius: 20px; border: 1.5px solid var(--borde); color: var(--gris);
+  background: var(--blanco);
+}
+.hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+.btn-grad {
+  background: var(--grad); color: #fff;
+  padding: 13px 28px; border-radius: 8px;
+  font-weight: 900; font-size: 0.88rem; letter-spacing: 1px;
+  text-decoration: none; text-transform: uppercase;
+  display: inline-flex; align-items: center; gap: 8px;
+  transition: opacity 0.2s, transform 0.15s; box-shadow: 0 4px 20px rgba(232,25,44,0.25);
+}
+.btn-grad:hover { opacity: 0.9; transform: translateY(-2px); }
+.btn-outline-dark {
+  border: 2px solid var(--borde); color: var(--texto);
+  padding: 13px 28px; border-radius: 8px;
+  font-weight: 800; font-size: 0.88rem; letter-spacing: 1px;
+  text-decoration: none; text-transform: uppercase;
+  display: inline-flex; align-items: center; gap: 8px;
+  transition: border-color 0.2s, transform 0.15s;
+}
+.btn-outline-dark:hover { border-color: var(--ks-rojo); transform: translateY(-2px); }
+
+.hero-logo-display {
+  display: flex; flex-direction: column; align-items: center; gap: 10px;
+}
+.hero-logo-display img {
+  width: 220px; height: 220px; object-fit: contain;
+  filter: drop-shadow(0 8px 30px rgba(244,121,32,0.25));
+  animation: float 5s ease-in-out infinite;
+}
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50%      { transform: translateY(-10px); }
+}
+
+/* ══════════════════════════════════
+   SECCIÓN BASE
+══════════════════════════════════ */
+section { padding: 5rem 2rem; }
+.container { max-width: 1100px; margin: 0 auto; }
+.section-tag {
+  font-size: 0.7rem; font-weight: 800; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--ks-rojo); margin-bottom: 0.5rem; display: block;
+}
+.section-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2rem, 5vw, 3rem); letter-spacing: 2px; color: var(--texto); margin-bottom: 0.7rem; line-height: 1.05;
+}
+.section-desc { color: var(--gris); font-size: 0.95rem; line-height: 1.75; max-width: 600px; margin-bottom: 3rem; }
+.grad-line { height: 3px; width: 48px; background: var(--grad); border-radius: 2px; margin-bottom: 1.5rem; }
+
+/* ══════════════════════════════════
+   FACHADA
+══════════════════════════════════ */
+#fachada { background: var(--negro); padding: 0; }
+.fachada-wrap { display: grid; grid-template-columns: 1fr 1fr; min-height: 460px; }
+.fachada-img-box { position: relative; overflow: hidden; }
+.fachada-img-box img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.fachada-grad { position: absolute; inset: 0; background: linear-gradient(to right, transparent 45%, var(--negro) 100%); }
+.fachada-info { display: flex; flex-direction: column; justify-content: center; padding: 4rem 3rem; }
+.fachada-info .section-tag { color: var(--ks-amarillo); }
+.fachada-info .section-title { color: var(--blanco); }
+.fachada-info .section-desc { color: #8BAAC8; margin-bottom: 1.5rem; }
+.fachada-horario {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 8px; padding: 10px 16px; margin-bottom: 1.5rem;
+}
+.fachada-horario svg { width: 18px; height: 18px; color: var(--ks-amarillo); flex-shrink: 0; }
+.fachada-horario-txt { font-size: 0.82rem; font-weight: 700; color: #AAB4C8; }
+.fachada-horario-txt strong { color: var(--blanco); display: block; font-size: 0.95rem; }
+.fachada-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.fachada-chip {
+  font-size: 0.7rem; font-weight: 800; letter-spacing: 1px; text-transform: uppercase;
+  padding: 5px 12px; border-radius: 4px;
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); color: #8BAAC8;
+}
+
+/* ══════════════════════════════════
+   NOSOTROS
+══════════════════════════════════ */
+#nosotros { background: var(--fondo); }
+.nosotros-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+.stat-row { display: flex; gap: 2rem; margin-top: 2rem; flex-wrap: wrap; }
+.stat-num {
+  font-family: 'Bebas Neue', sans-serif; font-size: 2.8rem; letter-spacing: 2px; line-height: 1;
+  background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.stat-label { font-size: 0.72rem; color: var(--gris); font-weight: 800; text-transform: uppercase; letter-spacing: 1px; }
+.info-card {
+  background: var(--blanco); border-radius: 12px; overflow: hidden;
+  border: 1.5px solid var(--borde); box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+}
+.info-card-top {
+  padding: 1.2rem 1.5rem;
+  background: var(--grad); display: flex; align-items: center; gap: 10px;
+}
+.info-card-top-logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.4rem; letter-spacing: 3px; color: #fff;
+}
+.info-card-body { padding: 1rem 1.5rem; }
+.info-row {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  padding: 9px 0; border-bottom: 1px solid var(--borde); font-size: 0.84rem; gap: 1rem;
+}
+.info-row:last-child { border-bottom: none; }
+.info-k { color: var(--gris); font-weight: 700; flex-shrink: 0; }
+.info-v { color: var(--texto); font-weight: 700; text-align: right; }
+
+/* ══════════════════════════════════
+   SERVICIOS
+══════════════════════════════════ */
+#servicios { background: var(--blanco); }
+.servicios-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; }
+.srv-card {
+  background: var(--fondo); border: 1.5px solid var(--borde);
+  border-radius: 12px; padding: 2rem 1.5rem; position: relative;
+  transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s;
+}
+.srv-card:hover { box-shadow: 0 8px 30px rgba(0,0,0,0.1); border-color: #c0c8dc; transform: translateY(-4px); }
+.srv-icon { font-size: 2.2rem; margin-bottom: 1rem; }
+.srv-titulo { font-weight: 900; color: var(--texto); font-size: 1rem; margin-bottom: 0.4rem; text-transform: uppercase; letter-spacing: 1px; }
+.srv-desc { font-size: 0.82rem; color: var(--gris); line-height: 1.65; }
+.srv-accent { height: 3px; width: 36px; background: var(--grad); border-radius: 2px; margin-top: 1rem; }
+
+/* ══════════════════════════════════
+   PRODUCTOS
+══════════════════════════════════ */
+#productos { background: var(--fondo2); }
+.productos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1.2rem; }
+.prod-card {
+  background: var(--blanco); border: 1.5px solid var(--borde);
+  border-radius: 10px; overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.prod-card:hover { transform: translateY(-5px); box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
+.prod-icon { height: 100px; display: flex; align-items: center; justify-content: center; font-size: 2.8rem; background: var(--fondo); }
+.prod-info { padding: 0.8rem 1rem; }
+.prod-nombre { font-weight: 800; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 1px; color: var(--texto); }
+.prod-tag {
+  display: inline-block; font-size: 0.6rem; font-weight: 800;
+  padding: 2px 8px; border-radius: 2px; text-transform: uppercase;
+  letter-spacing: 1px; margin-top: 5px; color: #fff;
+  background: var(--grad);
+}
+
+/* ══════════════════════════════════
+   VENTAJAS
+══════════════════════════════════ */
+#ventajas { background: var(--blanco); }
+.ventajas-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1.4rem; }
+.v-card {
+  background: var(--fondo); border: 1.5px solid var(--borde);
+  border-radius: 12px; padding: 1.8rem 1.5rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.v-card:hover { border-color: #c0c8dc; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+.v-icon { font-size: 2rem; margin-bottom: 0.8rem; }
+.v-titulo { font-weight: 900; color: var(--texto); margin-bottom: 0.4rem; font-size: 0.95rem; }
+.v-desc { font-size: 0.82rem; color: var(--gris); line-height: 1.6; }
+
+/* ══════════════════════════════════
+   PROCESO
+══════════════════════════════════ */
+#proceso { background: var(--fondo2); }
+.proceso-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
+.p-card {
+  background: var(--blanco); border: 1.5px solid var(--borde);
+  border-radius: 12px; padding: 2rem 1.5rem; position: relative; overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+.p-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.09); }
+.p-num-bg {
+  font-family: 'Bebas Neue', sans-serif; font-size: 5rem; letter-spacing: 2px;
+  position: absolute; bottom: -0.5rem; right: 0.5rem; line-height: 1; pointer-events: none;
+  background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text; opacity: 0.12;
+}
+.p-step { font-size: 0.7rem; letter-spacing: 3px; font-weight: 800; text-transform: uppercase; margin-bottom: 0.5rem;
+  background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.p-icon { font-size: 2rem; margin-bottom: 0.7rem; }
+.p-titulo { font-weight: 900; color: var(--texto); font-size: 0.95rem; margin-bottom: 0.4rem; text-transform: uppercase; letter-spacing: 1px; }
+.p-desc { font-size: 0.82rem; color: var(--gris); line-height: 1.6; }
+
+/* ══════════════════════════════════
+   CONTACTO
+══════════════════════════════════ */
+#contacto { background: var(--blanco); }
+.contacto-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: start; }
+.contacto-desc { color: var(--gris); line-height: 1.75; margin-bottom: 1.8rem; font-size: 0.95rem; }
+.c-links { display: flex; flex-direction: column; gap: 0.85rem; }
+.c-item {
+  display: flex; align-items: center; gap: 1rem;
+  background: var(--fondo); border: 1.5px solid var(--borde);
+  border-radius: 10px; padding: 1rem 1.2rem;
+  text-decoration: none; color: var(--texto);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.c-item:hover { border-color: #c0c8dc; box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+.c-ico {
+  width: 40px; height: 40px; border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.c-ico svg { width: 22px; height: 22px; }
+.ico-wsp  { background: rgba(37,211,102,0.12); }
+.ico-tel  { background: rgba(21,101,192,0.1); }
+.ico-fb   { background: rgba(24,119,242,0.1); }
+.ico-loc  { background: rgba(232,25,44,0.08); }
+.ico-clock { background: rgba(244,121,32,0.1); }
+.c-label { font-size: 0.63rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: var(--gris); display: block; }
+.c-val   { font-size: 0.9rem; font-weight: 800; color: var(--texto); }
+
+.mapa-box { border-radius: 12px; overflow: hidden; border: 1.5px solid var(--borde); box-shadow: 0 4px 20px rgba(0,0,0,0.07); }
+.mapa-box iframe { width: 100%; height: 320px; display: block; }
+.mapa-footer {
+  background: var(--fondo2); border-top: 1.5px solid var(--borde);
+  padding: 1rem 1.2rem;
+}
+.mapa-footer p { color: var(--gris); font-size: 0.82rem; line-height: 1.5; }
+.mapa-footer strong { color: var(--texto); }
+
+/* ══════════════════════════════════
+   BOTONES FLOTANTES
+══════════════════════════════════ */
+.flotantes {
+  position: fixed; right: 1.2rem; bottom: 1.8rem; z-index: 200;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.fl-btn {
+  width: 50px; height: 50px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  text-decoration: none; box-shadow: 0 4px 18px rgba(0,0,0,0.22);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.fl-btn:hover { transform: scale(1.12); box-shadow: 0 6px 24px rgba(0,0,0,0.28); }
+.fl-btn svg { width: 24px; height: 24px; }
+.fl-wsp { background: #25D366; }
+.fl-fb  { background: #1877F2; }
+.fl-tel { background: var(--grad); }
+
+/* ══════════════════════════════════
+   FOOTER
+══════════════════════════════════ */
+footer {
+  background: var(--negro); padding: 3.5rem 2rem 2rem;
+  border-top: 4px solid transparent;
+  border-image: var(--grad-h) 1;
+}
+.footer-grid {
+  max-width: 1100px; margin: 0 auto;
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 3rem;
+  margin-bottom: 3rem;
+}
+.footer-brand img { height: 60px; object-fit: contain; margin-bottom: 0.8rem; filter: brightness(1.1); }
+.footer-brand-name {
+  font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; letter-spacing: 3px;
+  background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  margin-bottom: 0.4rem;
+}
+.footer-brand-sub { font-size: 0.73rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #3B5B7A; margin-bottom: 0.9rem; }
+.footer-brand-desc { font-size: 0.82rem; color: #4A6580; line-height: 1.65; }
+
+.footer-col-title {
+  font-size: 0.7rem; font-weight: 900; letter-spacing: 3px; text-transform: uppercase;
+  color: #5A7A9A; margin-bottom: 1rem; padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.footer-links-list { list-style: none; display: flex; flex-direction: column; gap: 0.55rem; }
+.footer-links-list a { color: #3B5B7A; text-decoration: none; font-size: 0.82rem; font-weight: 700; transition: color 0.2s; }
+.footer-links-list a:hover { color: #fff; }
+
+.footer-contact-list { display: flex; flex-direction: column; gap: 0.9rem; }
+.fc-item { display: flex; align-items: flex-start; gap: 10px; }
+.fc-item svg { width: 16px; height: 16px; flex-shrink: 0; margin-top: 2px; }
+.fc-texts {}
+.fc-label { font-size: 0.62rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: #3B5B7A; display: block; }
+.fc-val   { font-size: 0.82rem; font-weight: 700; color: #6B8FAD; }
+.fc-val a { color: #6B8FAD; text-decoration: none; }
+.fc-val a:hover { color: #fff; }
+
+.footer-social { display: flex; gap: 10px; margin-top: 1rem; }
+.fsoc-btn {
+  width: 36px; height: 36px; border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  text-decoration: none; transition: opacity 0.2s;
+}
+.fsoc-btn:hover { opacity: 0.85; }
+.fsoc-btn svg { width: 18px; height: 18px; }
+.fsoc-wsp { background: #25D366; }
+.fsoc-fb  { background: #1877F2; }
+
+.footer-bottom {
+  max-width: 1100px; margin: 0 auto;
+  display: flex; justify-content: space-between; align-items: center;
+  padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.07);
+  flex-wrap: wrap; gap: 0.5rem;
+}
+.footer-copy { color: #1C2D3A; font-size: 0.75rem; font-weight: 700; }
+.footer-horario-badge {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 20px; padding: 5px 14px;
+  font-size: 0.72rem; font-weight: 800; color: #3B5B7A;
+}
+.footer-horario-badge svg { width: 13px; height: 13px; color: var(--ks-amarillo); }
+
+/* ══════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════ */
+@media (max-width: 900px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 768px) {
+  .top-bar { justify-content: center; }
+  .nav-links { display: none; flex-direction: column; position: absolute; top: 68px; left: 0; right: 0; background: var(--blanco); padding: 1.5rem 2rem; gap: 1.2rem; border-bottom: 3px solid var(--borde); }
+  .nav-links.open { display: flex; }
+  .nav-toggle { display: flex; }
+  .hero-inner { grid-template-columns: 1fr; text-align: center; }
+  .hero-logo-display img { width: 160px; height: 160px; }
+  .hero-pills { justify-content: center; }
+  .hero-btns { justify-content: center; }
+  .fachada-wrap { grid-template-columns: 1fr; }
+  .fachada-img-box { height: 260px; }
+  .fachada-grad { background: linear-gradient(to bottom, transparent 40%, var(--negro) 100%); }
+  .nosotros-grid { grid-template-columns: 1fr; }
+  .contacto-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══ TOP BAR ══ -->
+<div class="top-bar">
+  <div class="top-bar-left">
+    <a href="tel:+51925101050" class="top-bar-item">
+      <!-- Phone icon -->
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      +51 925 101 050
+    </a>
+    <span class="top-bar-item">
+      <!-- Clock icon -->
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      Lun–Sáb: 8:00 am – 8:00 pm
+    </span>
+    <a href="https://www.google.com/maps/place/Kolores+Sport/@-15.4921591,-70.1313325,20.79z" target="_blank" class="top-bar-item">
+      <!-- Pin icon -->
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      Jr. 8 de Noviembre #259, Juliaca
+    </a>
+  </div>
+  <div class="top-bar-right">
+    <a href="https://wa.me/51925101050" target="_blank" class="top-social-btn top-wsp">
+      <!-- WhatsApp SVG -->
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      WhatsApp
+    </a>
+    <a href="https://www.facebook.com/p/Kolores-Sport-100063472241334/" target="_blank" class="top-social-btn top-fb">
+      <!-- Facebook SVG -->
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      Facebook
+    </a>
+  </div>
+</div>
+
+<!-- ══ NAV ══ -->
+<nav id="mainNav">
+  <a href="#inicio" class="logo-wrap">
+    <img src="logo.png" alt="Logo Kolores Sport" class="logo-img">
+    <div class="logo-texts">
+      <span class="logo-top-txt">Confecciones</span>
+      <span class="logo-name">KOLORES SPORT</span>
+    </div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#inicio">Inicio</a></li>
+    <li><a href="#nosotros">Nosotros</a></li>
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#productos">Productos</a></li>
+    <li><a href="#proceso">Proceso</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+  <button class="nav-toggle" id="navToggle" onclick="toggleNav()" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section id="inicio">
+  <div class="hero-deco-top"></div>
+  <div class="hero-deco-circle"></div>
+  <div class="hero-deco-circle2"></div>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span></span> Confecciones en Juliaca, Puno
+      </div>
+      <h1 class="hero-title">
+        KOLORES<br><span class="grad-txt">SPORT</span>
+      </h1>
+      <p class="hero-slogan">"Calidad que se viste"</p>
+      <div class="hero-pills">
+        <span class="pill">🧵 Bordados</span>
+        <span class="pill">🖨️ Sublimados</span>
+        <span class="pill">🎨 Estampados</span>
+        <span class="pill">📦 Mayor y Menor</span>
+        <span class="pill">🕗 8am – 8pm</span>
+      </div>
+      <p style="color:var(--gris);font-size:0.9rem;line-height:1.7;margin-bottom:2rem;max-width:500px;">
+        Confecciones en general para empresas, equipos, instituciones y público en general.
+        Diseños personalizados con calidad garantizada.<br>
+        <strong style="color:var(--texto);">Jr. 8 de Noviembre #259 · Juliaca, Puno</strong>
+      </p>
+      <div class="hero-btns">
+        <a href="https://wa.me/51925101050" target="_blank" class="btn-grad">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Pedir por WhatsApp
+        </a>
+        <a href="#contacto" class="btn-outline-dark">Ver contacto ↓</a>
+      </div>
+    </div>
+    <div class="hero-logo-display">
+      <img src="logo.png" alt="Kolores Sport Logo KS">
+    </div>
+  </div>
+</section>
+
+<!-- ══ FACHADA ══ -->
+<section id="fachada">
+  <div class="fachada-wrap">
+    <div class="fachada-img-box">
+      <img src="fachada.jpg" alt="Tienda Kolores Sport – Jr. 8 de Noviembre #259, Juliaca">
+      <div class="fachada-grad"></div>
+    </div>
+    <div class="fachada-info">
+      <span class="section-tag">📍 Nuestra tienda</span>
+      <h2 class="section-title" style="color:#fff;">VISÍTANOS EN JULIACA</h2>
+      <p class="section-desc" style="color:#6B8FAD;">Jr. 8 de Noviembre #259, Juliaca, Puno. Ven a conocer nuestros modelos, elige telas y coordina tu pedido directamente en tienda.</p>
+      <div class="fachada-horario">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--ks-amarillo);width:22px;height:22px;"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <div class="fachada-horario-txt">
+          Horario de atención
+          <strong>Lunes a Sábado: 8:00 am – 8:00 pm</strong>
+        </div>
+      </div>
+      <div class="fachada-chips">
+        <span class="fachada-chip">Camisetas</span>
+        <span class="fachada-chip">Buzos</span>
+        <span class="fachada-chip">Chalecos</span>
+        <span class="fachada-chip">Polos</span>
+        <span class="fachada-chip">Banderolas</span>
+        <span class="fachada-chip">Bordados</span>
+        <span class="fachada-chip">Sublimados</span>
+        <span class="fachada-chip">Estampados</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ NOSOTROS ══ -->
+<section id="nosotros">
+  <div class="container">
+    <div class="nosotros-grid">
+      <div>
+        <span class="section-tag">● Sobre nosotros</span>
+        <h2 class="section-title">CONFECCIONES EN GENERAL CON CALIDAD</h2>
+        <div class="grad-line"></div>
+        <p class="section-desc">Somos Kolores Sport, una empresa de confecciones ubicada en Juliaca, Puno. Fabricamos todo tipo de prendas para empresas, equipos deportivos, instituciones educativas y público en general.</p>
+        <p class="section-desc" style="margin-top:-1.5rem;">Usamos bordado, sublimación digital y estampado para que cada prenda refleje la identidad de quien la usa. Atendemos pedidos al por mayor y menor con entrega puntual.</p>
+        <div class="stat-row">
+          <div><div class="stat-num">100%</div><div class="stat-label">Confección propia</div></div>
+          <div><div class="stat-num">3</div><div class="stat-label">Técnicas especializadas</div></div>
+          <div><div class="stat-num">12h</div><div class="stat-label">De atención diaria</div></div>
+        </div>
+      </div>
+      <div class="info-card">
+        <div class="info-card-top">
+          <img src="logo.png" alt="Logo KS" style="height:38px;object-fit:contain;filter:brightness(10);">
+          <div class="info-card-top-logo">KOLORES SPORT</div>
+        </div>
+        <div class="info-card-body">
+          <div class="info-row"><span class="info-k">Especialidad</span><span class="info-v">Confecciones en general</span></div>
+          <div class="info-row"><span class="info-k">Técnicas</span><span class="info-v">Bordado · Sublimado · Estampado</span></div>
+          <div class="info-row"><span class="info-k">Productos</span><span class="info-v">Camisetas, Buzos, Polos, Chalecos…</span></div>
+          <div class="info-row"><span class="info-k">Pedidos</span><span class="info-v">Mayor y menor</span></div>
+          <div class="info-row"><span class="info-k">Horario</span><span class="info-v">Lun–Sáb 8:00am – 8:00pm</span></div>
+          <div class="info-row"><span class="info-k">Dirección</span><span class="info-v">Jr. 8 de Noviembre #259</span></div>
+          <div class="info-row"><span class="info-k">Ciudad</span><span class="info-v">Juliaca, Puno – Perú</span></div>
+          <div class="info-row"><span class="info-k">Contacto</span><span class="info-v">+51 925 101 050</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SERVICIOS ══ -->
+<section id="servicios">
+  <div class="container">
+    <span class="section-tag">● Lo que hacemos</span>
+    <h2 class="section-title">NUESTROS SERVICIOS</h2>
+    <div class="grad-line"></div>
+    <p class="section-desc">Técnicas especializadas para que tu ropa tenga el acabado perfecto y refleje tu identidad.</p>
+    <div class="servicios-grid">
+      <div class="srv-card">
+        <div class="srv-icon">🧵</div>
+        <div class="srv-titulo">Bordados</div>
+        <div class="srv-desc">Logos, nombres e insignias bordados con hilo de alta resistencia. Acabado profesional que no se deteriora con el lavado.</div>
+        <div class="srv-accent"></div>
+      </div>
+      <div class="srv-card">
+        <div class="srv-icon">🖨️</div>
+        <div class="srv-titulo">Sublimados Digitales</div>
+        <div class="srv-desc">Impresión de alta definición con colores vivos y permanentes. Ideal para diseños complejos, fotografías y degradados en tela.</div>
+        <div class="srv-accent"></div>
+      </div>
+      <div class="srv-card">
+        <div class="srv-icon">🎨</div>
+        <div class="srv-titulo">Estampados</div>
+        <div class="srv-desc">Serigrafía y estampado en tela para diseños con colores sólidos. Resistente y de acabado mate o brillante según el diseño.</div>
+        <div class="srv-accent"></div>
+      </div>
+      <div class="srv-card">
+        <div class="srv-icon">📐</div>
+        <div class="srv-titulo">Confección a Medida</div>
+        <div class="srv-desc">Fabricamos desde cero según tus especificaciones: talla, modelo, color y tipo de tela. Tú decides, nosotros confeccionamos.</div>
+        <div class="srv-accent"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PRODUCTOS ══ -->
+<section id="productos">
+  <div class="container">
+    <span class="section-tag">● Catálogo</span>
+    <h2 class="section-title">QUÉ CONFECCIONAMOS</h2>
+    <div class="grad-line"></div>
+    <p class="section-desc">Fabricamos una amplia variedad de prendas con personalización completa en bordado, sublimado o estampado.</p>
+    <div class="productos-grid">
+      <div class="prod-card"><div class="prod-icon">⚽</div><div class="prod-info"><div class="prod-nombre">Camisetas Deportivas</div><span class="prod-tag">Deportivo</span></div></div>
+      <div class="prod-card"><div class="prod-icon">🧥</div><div class="prod-info"><div class="prod-nombre">Buzos y Casacas</div><span class="prod-tag">Abrigo</span></div></div>
+      <div class="prod-card"><div class="prod-icon">🦺</div><div class="prod-info"><div class="prod-nombre">Chalecos</div><span class="prod-tag">Trabajo</span></div></div>
+      <div class="prod-card"><div class="prod-icon">👕</div><div class="prod-info"><div class="prod-nombre">Polos</div><span class="prod-tag">Casual</span></div></div>
+      <div class="prod-card"><div class="prod-icon">🏃</div><div class="prod-info"><div class="prod-nombre">Shorts y Pants</div><span class="prod-tag">Deportivo</span></div></div>
+      <div class="prod-card"><div class="prod-icon">🚩</div><div class="prod-info"><div class="prod-nombre">Banderolas</div><span class="prod-tag">Publicidad</span></div></div>
+      <div class="prod-card"><div class="prod-icon">👔</div><div class="prod-info"><div class="prod-nombre">Uniformes Oficina</div><span class="prod-tag">Formal</span></div></div>
+      <div class="prod-card"><div class="prod-icon">🎽</div><div class="prod-info"><div class="prod-nombre">Uniformes Escolares</div><span class="prod-tag">Escolar</span></div></div>
+      <div class="prod-card"><div class="prod-icon">🥋</div><div class="prod-info"><div class="prod-nombre">Ropa de Trabajo</div><span class="prod-tag">Industrial</span></div></div>
+      <div class="prod-card"><div class="prod-icon">✂️</div><div class="prod-info"><div class="prod-nombre">Pedidos Especiales</div><span class="prod-tag">A medida</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ VENTAJAS ══ -->
+<section id="ventajas">
+  <div class="container">
+    <span class="section-tag">● Por qué elegirnos</span>
+    <h2 class="section-title">NUESTRA DIFERENCIA</h2>
+    <div class="grad-line"></div>
+    <p class="section-desc">En Kolores Sport cada pedido se trabaja con dedicación, calidad y puntualidad.</p>
+    <div class="ventajas-grid">
+      <div class="v-card"><div class="v-icon">🎨</div><div class="v-titulo">Personalización total</div><div class="v-desc">Colores, tallas, bordados, serigrafía y sublimados a tu gusto. Traemos tu idea a la tela.</div></div>
+      <div class="v-card"><div class="v-icon">🏭</div><div class="v-titulo">Taller propio</div><div class="v-desc">Todo se fabrica en Juliaca. Controlamos la calidad en cada paso del proceso.</div></div>
+      <div class="v-card"><div class="v-icon">💰</div><div class="v-titulo">Precios accesibles</div><div class="v-desc">Precios competitivos al por mayor y menor, con descuentos por volumen de pedido.</div></div>
+      <div class="v-card"><div class="v-icon">⚡</div><div class="v-titulo">Entrega a tiempo</div><div class="v-desc">Cumplimos los plazos acordados. Tu pedido listo cuando lo necesitas.</div></div>
+      <div class="v-card"><div class="v-icon">📦</div><div class="v-titulo">Cualquier cantidad</div><div class="v-desc">Desde una sola prenda hasta lotes grandes para equipos e instituciones.</div></div>
+      <div class="v-card"><div class="v-icon">📲</div><div class="v-titulo">Atención directa</div><div class="v-desc">Coordinamos todo por WhatsApp: diseño, tallas, colores y seguimiento de tu pedido.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PROCESO ══ -->
+<section id="proceso">
+  <div class="container">
+    <span class="section-tag">● Cómo trabajamos</span>
+    <h2 class="section-title">TU PEDIDO EN 4 PASOS</h2>
+    <div class="grad-line"></div>
+    <p class="section-desc">Hacer tu pedido es rápido y sencillo. Así trabajamos:</p>
+    <div class="proceso-grid">
+      <div class="p-card"><div class="p-num-bg">01</div><div class="p-step">Paso 01</div><div class="p-icon">💬</div><div class="p-titulo">Contáctanos</div><div class="p-desc">Escríbenos por WhatsApp o llámanos. Cuéntanos qué necesitas, cantidad y fechas.</div></div>
+      <div class="p-card"><div class="p-num-bg">02</div><div class="p-step">Paso 02</div><div class="p-icon">📐</div><div class="p-titulo">Diseño</div><div class="p-desc">Coordinamos modelo, colores, tallas y técnica: bordado, sublimado o estampado.</div></div>
+      <div class="p-card"><div class="p-num-bg">03</div><div class="p-step">Paso 03</div><div class="p-icon">🧵</div><div class="p-titulo">Confección</div><div class="p-desc">Fabricamos en nuestro taller con materiales de calidad y el mejor acabado posible.</div></div>
+      <div class="p-card"><div class="p-num-bg">04</div><div class="p-step">Paso 04</div><div class="p-icon">🚀</div><div class="p-titulo">Entrega</div><div class="p-desc">Recoge en tienda en Jr. 8 de Noviembre #259 o coordinamos el envío según necesidad.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CONTACTO ══ -->
+<section id="contacto">
+  <div class="container">
+    <span class="section-tag">● Encuéntranos</span>
+    <h2 class="section-title">CONTÁCTANOS</h2>
+    <div class="grad-line"></div>
+    <div class="contacto-grid">
+      <div>
+        <p class="contacto-desc">¿Listo para hacer tu pedido? Escríbenos por WhatsApp, llámanos o visítanos directamente en nuestra tienda en Juliaca. Atendemos pedidos de todo Puno y el Perú.</p>
+        <div class="c-links">
+          <a href="https://wa.me/51925101050" target="_blank" class="c-item">
+            <div class="c-ico ico-wsp">
+              <svg viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </div>
+            <div><span class="c-label">WhatsApp</span><span class="c-val">+51 925 101 050</span></div>
+          </a>
+          <a href="tel:+51925101050" class="c-item">
+            <div class="c-ico ico-tel">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#1565C0" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <div><span class="c-label">Teléfono</span><span class="c-val">+51 925 101 050</span></div>
+          </a>
+          <a href="https://www.facebook.com/p/Kolores-Sport-100063472241334/" target="_blank" class="c-item">
+            <div class="c-ico ico-fb">
+              <svg viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </div>
+            <div><span class="c-label">Facebook</span><span class="c-val">Kolores Sport</span></div>
+          </a>
+          <div class="c-item">
+            <div class="c-ico ico-clock">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#F47920" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div><span class="c-label">Horario</span><span class="c-val">Lun – Sáb: 8:00 am – 8:00 pm</span></div>
+          </div>
+          <a href="https://www.google.com/maps/place/Kolores+Sport/@-15.4921591,-70.1313325,20.79z/data=!4m6!3m5!1s0x9167f3e8dd331ce9:0xccd3f3b8211b6c7a!8m2!3d-15.492394!4d-70.131432!16s%2Fg%2F11f04339vt" target="_blank" class="c-item">
+            <div class="c-ico ico-loc">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#E8192C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div><span class="c-label">Dirección</span><span class="c-val">Jr. 8 de Noviembre #259, Juliaca – Puno</span></div>
+          </a>
+        </div>
+      </div>
+      <div>
+        <div class="mapa-box">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243.5!2d-70.131432!3d-15.492394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9167f3e8dd331ce9%3A0xccd3f3b8211b6c7a!2sKolores%20Sport!5e0!3m2!1ses!2spe!4v1700000000000"
+            style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+        <div class="mapa-footer">
+          <p><strong>Kolores Sport</strong><br>Jr. 8 de Noviembre #259, Juliaca, Puno – Perú<br>Horario: Lun – Sáb 8:00 am – 8:00 pm</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-grid">
+    <!-- Marca -->
+    <div class="footer-brand">
+      <img src="logo.png" alt="Logo Kolores Sport">
+      <div class="footer-brand-name">KOLORES SPORT</div>
+      <div class="footer-brand-sub">Confecciones en General · Juliaca, Puno</div>
+      <p class="footer-brand-desc">"Calidad que se viste" — Bordados, sublimados digitales y estampados para empresas, equipos e instituciones. Mayor y menor.</p>
+      <div class="footer-social" style="margin-top:1rem;">
+        <a href="https://wa.me/51925101050" target="_blank" class="fsoc-btn fsoc-wsp" title="WhatsApp">
+          <svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/p/Kolores-Sport-100063472241334/" target="_blank" class="fsoc-btn fsoc-fb" title="Facebook">
+          <svg viewBox="0 0 24 24" fill="white"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+      </div>
+    </div>
+    <!-- Nav -->
+    <div>
+      <div class="footer-col-title">Navegación</div>
+      <ul class="footer-links-list">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#proceso">Proceso</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+    <!-- Servicios -->
+    <div>
+      <div class="footer-col-title">Servicios</div>
+      <ul class="footer-links-list">
+        <li><a href="#servicios">Bordados</a></li>
+        <li><a href="#servicios">Sublimados Digitales</a></li>
+        <li><a href="#servicios">Estampados</a></li>
+        <li><a href="#servicios">Confección a Medida</a></li>
+        <li><a href="#productos">Pedidos al por Mayor</a></li>
+        <li><a href="#productos">Pedidos al por Menor</a></li>
+      </ul>
+    </div>
+    <!-- Contacto -->
+    <div>
+      <div class="footer-col-title">Contacto y Ubicación</div>
+      <div class="footer-contact-list">
+        <div class="fc-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          <div class="fc-texts"><span class="fc-label">WhatsApp / Teléfono</span><span class="fc-val"><a href="https://wa.me/51925101050">+51 925 101 050</a></span></div>
+        </div>
+        <div class="fc-item">
+          <svg viewBox="0 0 24 24" fill="#1877F2" style="width:16px;height:16px;"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          <div class="fc-texts"><span class="fc-label">Facebook</span><span class="fc-val"><a href="https://www.facebook.com/p/Kolores-Sport-100063472241334/" target="_blank">Kolores Sport</a></span></div>
+        </div>
+        <div class="fc-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#E8192C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div class="fc-texts"><span class="fc-label">Dirección</span><span class="fc-val">Jr. 8 de Noviembre #259<br>Juliaca, Puno – Perú</span></div>
+        </div>
+        <div class="fc-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#FFD600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <div class="fc-texts"><span class="fc-label">Horario de Atención</span><span class="fc-val">Lun – Sáb: 8:00 am – 8:00 pm</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2025 Kolores Sport · Jr. 8 de Noviembre #259, Juliaca, Puno · Todos los derechos reservados</span>
+    <span class="footer-horario-badge">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      Atención: Lun–Sáb 8:00am – 8:00pm
+    </span>
+  </div>
+</footer>
+
+<!-- ══ FLOTANTES ══ -->
+<div class="flotantes">
+  <a href="https://wa.me/51925101050" target="_blank" class="fl-btn fl-wsp" title="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+  <a href="https://www.facebook.com/p/Kolores-Sport-100063472241334/" target="_blank" class="fl-btn fl-fb" title="Facebook">
+    <svg viewBox="0 0 24 24" fill="white"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+  </a>
+  <a href="tel:+51925101050" class="fl-btn fl-tel" title="Llamar">
+    <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+  </a>
+</div>
+
+<script>
+  function toggleNav() {
+    document.getElementById('navLinks').classList.toggle('open');
+  }
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
+  });
+</script>
+</body>
+</html>
